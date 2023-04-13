@@ -16,3 +16,19 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/tasks', function () {
+    return 'List tasks';
+});
+
+Route::get('/tasks/{id}', function (int $id) {
+    return "tasks $id";
+})->where('id', '[0-9]+');
+
+Route::get('/tasks/create', function () {
+    return 'Create tasks';
+});
+
+Route::get('/tasks/update/{id}', function (int $id) {
+    return "Update tasks $id";
+})->where('id', '[0-9]+');
