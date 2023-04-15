@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <?php foreach ($tasks as $task) : ?>
+    <?php foreach ($tasks as $task): ?>
         <h2><a href="/tasks/<?php echo $task['id'] ?>"><?php echo $task['title'] ?></a></h2>
         <?php echo $task['body'] ?>
     <?php endforeach; ?>
