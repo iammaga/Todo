@@ -36,4 +36,4 @@ Route::get('/tasks/{id}', function (int $id) {
     return view('tasks/task', [
         'task' => Tasks::find($id)
     ]);
-});
+})->where('id', '[0-9]+');
