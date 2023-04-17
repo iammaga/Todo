@@ -26,7 +26,6 @@ Route::get('/tasks/update/{id}', function (int $id) {
     return "Update tasks $id";
 })->where('id', '[0-9]+');
 
-
 Route::get('/tasks', function () {
     return view('tasks/tasks', [
         'tasks' => Tasks::all()
