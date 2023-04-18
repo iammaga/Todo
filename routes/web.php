@@ -37,3 +37,19 @@ Route::get('/tasks/{id}', function (int $id) {
         'task' => Tasks::find($id)
     ]);
 })->where('id', '[0-9]+');
+
+Route::get('/users', function () {
+    return 'Users Page';
+});
+
+Route::get('/users/{id}', function (int $id) {
+    return "User $id";
+})->where('id', '[0-9]+');
+
+Route::get('/users/create', function () {
+    return 'Create User';
+});
+
+Route::get('/users/update{id}', function (int $id) {
+    return "Update User $id";
+})->where('id', '[0-9]+');
