@@ -50,6 +50,6 @@ Route::get('/users/create', function () {
     return 'Create User';
 });
 
-Route::get('/users/update{id}', function (int $id) {
+Route::get('/users/update/{id}', function (int $id) {
     return "Update User $id";
 })->where('id', '[0-9]+');
