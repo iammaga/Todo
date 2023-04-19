@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\Tasks;
+use App\Models\Users;
 
 /*
 |--------------------------------------------------------------------------
@@ -52,4 +53,16 @@ Route::get('/users/create', function () {
 
 Route::get('/users/update/{id}', function (int $id) {
     return "Update User $id";
+})->where('id', '[0-9]+');
+
+Route::get('/users', function () {
+    return view('users/users', [
+        'users' => Users::all(),
+    ]);
+});
+
+Route::get('/users/{id}', function (int $id) {
+    return view('users/user', [
+        'user' => Users::find($id)
+    ]);
 })->where('id', '[0-9]+');
