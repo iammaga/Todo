@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Users List</title>
-</head>
-
-<body>
+@section('content')
     <h2>Users List</h2>
 
     <table style="width: 100%; border: 1px solid black">
@@ -37,7 +29,4 @@
             </tr>
         @endforeach
     </table>
-
-</body>
-
-</html>
+@endsection
