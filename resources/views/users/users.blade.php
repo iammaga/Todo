@@ -17,25 +17,25 @@
             <th style="border: 1px solid black">Email</th>
             <th style="border: 1px solid black">Password</th>
         </tr>
-        <?php foreach ($users as $user): ?>
+        @foreach ($users as $user)
             <tr>
                 <td style="border: 1px solid black">
-                    <a href="/users/<?php echo $user['id'] ?>">
-                        <h3><?php echo $user['name'] ?></h3>
+                    <a href="/users/{{ $user['id'] }}">
+                        <h3>{{ $user['name'] }}</h3>
                     </a>
                 </td>
                 <td style="border: 1px solid black">
                     <p>
-                        <?php echo $user['email'] ?>
+                        {{ $user['email'] }}
                     </p>
                 </td>
                 <td style="border: 1px solid black">
                     <p>
-                        <?php echo $user['password'] ?>
+                        {{ $user['password'] }}
                     </p>
                 </td>
             </tr>
-        <?php endforeach; ?>
+        @endforeach
     </table>
 
 </body>
