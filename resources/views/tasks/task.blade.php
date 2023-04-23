@@ -1,16 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout')
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task {{ $task['id'] }}</title>
-</head>
-
-<body>
+@section('content')
     <h2>{{ $task['title'] }}</h2>
     <p>{{ $task['body'] }}</p>
-</body>
-
-</html>
+@endsection
