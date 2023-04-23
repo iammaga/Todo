@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task {{ $task['id'] }}</title>
+    <title>Todo</title>
 </head>
 
 <body>
-    <h2>{{ $task['title'] }}</h2>
-    <p>{{ $task['body'] }}</p>
+    @extends('layout')
+
+    @section('content')
+        <h2>{{ $task['title'] }}</h2>
+        <p>{{ $task['body'] }}</p>
+    @endsection
 </body>
 
 </html>
