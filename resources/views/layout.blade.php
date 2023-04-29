@@ -21,13 +21,7 @@
     </style>
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/users">Users</a></li>
-            <li><a href="/tasks">Tasks</a></li>
-        </ul>
-    </nav>
+    @include('partials._header')
 
     @yield('content')
 </body>
