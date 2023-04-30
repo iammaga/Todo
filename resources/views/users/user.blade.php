@@ -1,24 +1,26 @@
 @extends('layout')
 
 @section('content')
-    <table style="width: 100%; border: 1px solid black">
+    <h2>User {{ $user['id'] }}</h2>
+
+    <table>
         <tr>
-            <th style="border: 1px solid black">Name</th>
-            <th style="border: 1px solid black">Email</th>
-            <th style="border: 1px solid black">Joined</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Joined</th>
         </tr>
         <tr>
-            <td style="border: 1px solid black">
+            <td>
                 <p>
                     {{ $user['name'] }}
                 </p>
             </td>
-            <td style="border: 1px solid black">
+            <td>
                 <p>
                     {{ $user['email'] }}
                 </p>
             </td>
-            <td style="border: 1px solid black">
+            <td>
                 <p>
                     {{ $user['created_at'] }}
                 </p>

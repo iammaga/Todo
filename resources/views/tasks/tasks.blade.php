@@ -1,8 +1,22 @@
 @extends('layout')
 
 @section('content')
-    @foreach ($tasks as $task)
-        <h2><a href="/tasks/{{ $task['id'] }}">{{ $task['title'] }}</a></h2>
-        {{ $task['body'] }}
-    @endforeach
+    <h2>Tasks List</h2>
+
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+        @foreach ($tasks as $task)
+            <tr>
+                <td>
+                    <a href="/tasks/{{ $task['id'] }}">{{ $task['title'] }}</a>
+                </td>
+                <td>
+                    <p>{{ $task['body'] }}</p>
+                </td>
+            </tr>
+        @endforeach
+    </table>
 @endsection

@@ -3,25 +3,25 @@
 @section('content')
     <h2>Users List</h2>
 
-    <table style="width: 100%; border: 1px solid black">
+    <table>
         <tr>
-            <th style="border: 1px solid black">Name</th>
-            <th style="border: 1px solid black">Email</th>
-            <th style="border: 1px solid black">Password</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Password</th>
         </tr>
         @foreach ($users as $user)
             <tr>
-                <td style="border: 1px solid black">
+                <td>
                     <a href="/users/{{ $user['id'] }}">
                         <h3>{{ $user['name'] }}</h3>
                     </a>
                 </td>
-                <td style="border: 1px solid black">
+                <td>
                     <p>
                         {{ $user['email'] }}
                     </p>
                 </td>
-                <td style="border: 1px solid black">
+                <td>
                     <p>
                         {{ $user['password'] }}
                     </p>
